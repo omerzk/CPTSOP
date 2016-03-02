@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="#cc1c0d18">
+
+    <EditText
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/inputBill"
+            android:background="#444d55" android:hint="@string/hint"
+            android:layout_marginTop="41dp" android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" android:textColor="#c06b95"
+            android:textSize="22sp" android:gravity="center_vertical|center_horizontal"/>
+    <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/buttonText"
+            android:id="@+id/calcButton"
+            android:background="#a44d4241"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="13sp"
+            android:onClick="calculate"
+            android:layout_above="@+id/tipField" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="114dp"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round to nearest dollar"
+            android:id="@+id/checkBox"
+            android:layout_marginTop="66dp" android:contextClickable="false"
+            android:textSize="30dp"
+            android:checked="false" android:layout_below="@+id/inputBill" android:layout_centerHorizontal="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tipField" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="68dp" android:textSize="30dp" android:textColor="#ff90c8"
+            android:shadowColor="#47ff83"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="$"
+            android:id="@+id/textView"
+            android:layout_above="@+id/checkBox" android:layout_toRightOf="@+id/inputBill"
+            android:layout_toEndOf="@+id/inputBill" android:textSize="25dp"/>
+</RelativeLayout>
